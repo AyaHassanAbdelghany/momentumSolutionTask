@@ -9,6 +9,7 @@ import android.net.NetworkCapabilities
 import android.os.Build
 import android.view.LayoutInflater
 import com.example.momentumsolutiontask.R
+import com.example.momentumsolutiontask.databinding.DialogProgressBinding
 import retrofit2.Response
 
 object Util {
@@ -29,36 +30,36 @@ object Util {
 
         }
     }
-//
-//    fun showDialogMessage(message: String?, context: Context) {
-//
-//        alertDialogMessage = AlertDialog.Builder(context).create()
-//        alertDialogMessage?.setMessage(message)
-//        alertDialogMessage?.show()
-//        alertDialogMessage?.setCanceledOnTouchOutside(true)
-//        alertDialogMessage?.window?.setBackgroundDrawable(context.getDrawable(R.drawable.rounded_shape))
-//        alertDialogMessage?.setOnDismissListener {
-//            alertDialogMessage = null
-//        }
-//
-//    }
 
-//
-//    fun showProgressDialog(context: Context) {
-//        val alertDialog = AlertDialog.Builder(context)
-//
-//        val binding = DialogProgressBinding.inflate(
-//            LayoutInflater.from(
-//                context
-//            ), null, false
-//        )
-//        alertDialog.setCancelable(false)
-//        alertDialog.setView(binding.root)
-//
-//        alertDialogProgress = alertDialog.create()
-//        alertDialogProgress?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-//        alertDialogProgress?.show()
-//    }
+    fun showDialogMessage(message: String?, context: Context) {
+
+        alertDialogMessage = AlertDialog.Builder(context).create()
+        alertDialogMessage?.setMessage(message)
+        alertDialogMessage?.show()
+        alertDialogMessage?.setCanceledOnTouchOutside(true)
+        alertDialogMessage?.window?.setBackgroundDrawable(context.getDrawable(R.drawable.rounded_shape))
+        alertDialogMessage?.setOnDismissListener {
+            alertDialogMessage = null
+        }
+
+    }
+
+
+    fun showProgressDialog(context: Context) {
+        val alertDialog = AlertDialog.Builder(context)
+
+        val binding = DialogProgressBinding.inflate(
+            LayoutInflater.from(
+                context
+            ), null, false
+        )
+        alertDialog.setCancelable(false)
+        alertDialog.setView(binding.root)
+
+        alertDialogProgress = alertDialog.create()
+        alertDialogProgress?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        alertDialogProgress?.show()
+    }
 
     fun isInternetAvailable(context: Context): Boolean {
         val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
