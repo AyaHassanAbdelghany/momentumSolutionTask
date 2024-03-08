@@ -1,4 +1,4 @@
-package com.example.momentumsolutiontask.ui.product_details_screen.view
+package com.example.momentumsolutiontask.ui.productDetailsScreen.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,7 +11,7 @@ import com.bumptech.glide.Glide
 import com.example.momentumsolutiontask.R
 import com.example.momentumsolutiontask.databinding.FragmentPrdouctDetailsBinding
 import com.example.momentumsolutiontask.pojo.ProductResponse
-import com.example.momentumsolutiontask.ui.product_screen.SharedViewModel
+import com.example.momentumsolutiontask.ui.sharedViewModel.SharedViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -44,16 +44,18 @@ class ProductDetailsFragment : Fragment() {
     }
 
     private fun setData(productResponse: ProductResponse){
-        Glide.with(binding.productImage)
-            .load(productResponse.image)
-            .placeholder(R.drawable.ic_loading)
-            .error(R.drawable.ic_loading)
-            .into(binding.productImage)
 
-        binding.productTitleTxt.text = productResponse.title
-        binding.productDescTxt.text = productResponse.description
-        binding.productPriceTxt.text = productResponse.price.toString()
-        binding.productRateTxt.text = productResponse.rating?.rate.toString()
+        binding.apply {
+            Glide.with(binding.productImage)
+                .load(productResponse.image)
+                .placeholder(R.drawable.ic_loading)
+                .error(R.drawable.ic_loading)
+                .into(productImage)
 
-    }
+            productTitleTxt.text = productResponse.title
+            productDescTxt.text = productResponse.description
+            productPriceTxt.text = productResponse.price.toString()
+            productRateTxt.text = productResponse.rating?.rate.toString()
+        }
+        }
 }

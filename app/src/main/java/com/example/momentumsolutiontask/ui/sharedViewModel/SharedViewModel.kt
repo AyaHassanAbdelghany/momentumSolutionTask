@@ -1,4 +1,4 @@
-package com.example.momentumsolutiontask.ui.product_screen
+package com.example.momentumsolutiontask.ui.sharedViewModel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

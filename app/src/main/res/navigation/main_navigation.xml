@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/productFragment"
-        android:name="com.example.momentumsolutiontask.ui.product_screen.view.fragment.ProductFragment"
+        android:name="com.example.momentumsolutiontask.ui.productScreen.view.fragment.ProductFragment"
         android:label="fragment_product"
         tools:layout="@layout/fragment_product" >
         <action
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/prdouctDetailsFragment"
-        android:name="com.example.momentumsolutiontask.ui.product_details_screen.view.ProductDetailsFragment"
+        android:name="com.example.momentumsolutiontask.ui.productDetailsScreen.view.ProductDetailsFragment"
         android:label="fragment_prdouct_details"
         tools:layout="@layout/fragment_prdouct_details" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.momentumsolutiontask.ui.product_screen.view.activity
+package com.example.momentumsolutiontask.ui.productScreen.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

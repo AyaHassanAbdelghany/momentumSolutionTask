@@ -1,4 +1,4 @@
-package com.example.momentumsolutiontask.ui.product_screen.view.fragment
+package com.example.momentumsolutiontask.ui.productScreen.view.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,10 +11,10 @@ import androidx.navigation.fragment.findNavController
 import com.example.momentumsolutiontask.R
 import com.example.momentumsolutiontask.databinding.FragmentProductBinding
 import com.example.momentumsolutiontask.pojo.ProductResponse
-import com.example.momentumsolutiontask.ui.product_screen.SharedViewModel
+import com.example.momentumsolutiontask.ui.sharedViewModel.SharedViewModel
 import com.example.momentumsolutiontask.adapter.OnClickListener
 import com.example.momentumsolutiontask.adapter.product.ProductAdapter
-import com.example.momentumsolutiontask.ui.product_screen.viewModel.ProductViewModel
+import com.example.momentumsolutiontask.ui.productScreen.viewModel.ProductViewModel
 import com.example.momentumsolutiontask.utils.ResponseState
 import com.example.momentumsolutiontask.utils.Util
 import dagger.hilt.android.AndroidEntryPoint

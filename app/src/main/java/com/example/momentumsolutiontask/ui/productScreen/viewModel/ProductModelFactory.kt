@@ -1,4 +1,4 @@
-package com.example.momentumsolutiontask.ui.product_screen.viewModel
+package com.example.momentumsolutiontask.ui.productScreen.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
