@@ -12,8 +12,8 @@ import com.example.momentumsolutiontask.R
 import com.example.momentumsolutiontask.databinding.FragmentProductBinding
 import com.example.momentumsolutiontask.pojo.ProductResponse
 import com.example.momentumsolutiontask.ui.product_screen.SharedViewModel
-import com.example.momentumsolutiontask.ui.product_screen.view.adapter.OnClickListener
-import com.example.momentumsolutiontask.ui.product_screen.view.adapter.ProductAdapter
+import com.example.momentumsolutiontask.adapter.OnClickListener
+import com.example.momentumsolutiontask.adapter.product.ProductAdapter
 import com.example.momentumsolutiontask.ui.product_screen.viewModel.ProductViewModel
 import com.example.momentumsolutiontask.utils.ResponseState
 import com.example.momentumsolutiontask.utils.Util
@@ -40,7 +40,7 @@ class ProductFragment : Fragment() , OnClickListener {
     override fun onResume() {
         super.onResume()
 
-//        binding.toolBar.titleTxt.text = requireContext().getString(R.string.main_screen)
+        binding.toolBar.titleTxt.text = requireContext().getString(R.string.product_screen)
         setupProductAdapter()
 
         if (Util.isInternetAvailable(requireContext()))

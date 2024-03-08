@@ -4,10 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/ITI/Kotlin/tasks/MomentumSolutionTask/momentumSolutionTask/app/src/main/res/drawable/ic_arrow.xml" value="0.103" />
+        <entry key="..\:/ITI/Kotlin/tasks/MomentumSolutionTask/momentumSolutionTask/app/src/main/res/drawable/ic_rate.xml" value="0.103" />
         <entry key="..\:/ITI/Kotlin/tasks/MomentumSolutionTask/momentumSolutionTask/app/src/main/res/drawable/rounded_shape.xml" value="0.1" />
         <entry key="..\:/ITI/Kotlin/tasks/MomentumSolutionTask/momentumSolutionTask/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/ITI/Kotlin/tasks/MomentumSolutionTask/momentumSolutionTask/app/src/main/res/layout/dialog_progress.xml" value="0.1" />
-        <entry key="..\:/ITI/Kotlin/tasks/MomentumSolutionTask/momentumSolutionTask/app/src/main/res/layout/fragment_prdouct_details.xml" value="0.1" />
+        <entry key="..\:/ITI/Kotlin/tasks/MomentumSolutionTask/momentumSolutionTask/app/src/main/res/layout/fragment_prdouct_details.xml" value="0.22" />
         <entry key="..\:/ITI/Kotlin/tasks/MomentumSolutionTask/momentumSolutionTask/app/src/main/res/layout/fragment_product.xml" value="0.1" />
         <entry key="..\:/ITI/Kotlin/tasks/MomentumSolutionTask/momentumSolutionTask/app/src/main/res/layout/item_product.xml" value="0.1" />
         <entry key="..\:/ITI/Kotlin/tasks/MomentumSolutionTask/momentumSolutionTask/app/src/main/res/layout/tool_bar.xml" value="0.1" />

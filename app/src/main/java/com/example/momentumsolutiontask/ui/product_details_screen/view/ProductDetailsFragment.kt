@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.momentumsolutiontask.R
 import com.example.momentumsolutiontask.databinding.FragmentPrdouctDetailsBinding
+import com.example.momentumsolutiontask.pojo.ProductResponse
 import com.example.momentumsolutiontask.ui.product_screen.SharedViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -32,24 +33,27 @@ class ProductDetailsFragment : Fragment() {
     override fun onResume() {
         super.onResume()
 
-        binding.toolBar.titleTxt.text = requireContext().getString(R.string.details_screen)
         binding.toolBar.arrowBackImage.visibility = View.VISIBLE
         binding.toolBar.arrowBackImage.setOnClickListener {
             findNavController().popBackStack()
         }
 
         sharedViewModel.product.observe(viewLifecycleOwner){
-
-            Glide.with(binding.productImage)
-                .load(it.image)
-                .placeholder(R.drawable.ic_loading)
-                .error(R.drawable.ic_loading)
-                .into(binding.productImage)
-
-            binding.productTitleTxt.text = it.title
-            binding.productDescTxt.text = it.description
-            binding.productPriceTxt.text = it.price
-
+            setData(it)
         }
+    }
+
+    private fun setData(productResponse: ProductResponse){
+        Glide.with(binding.productImage)
+            .load(productResponse.image)
+            .placeholder(R.drawable.ic_loading)
+            .error(R.drawable.ic_loading)
+            .into(binding.productImage)
+
+        binding.productTitleTxt.text = productResponse.title
+        binding.productDescTxt.text = productResponse.description
+        binding.productPriceTxt.text = productResponse.price.toString()
+        binding.productRateTxt.text = productResponse.rating?.rate.toString()
+
     }
 }

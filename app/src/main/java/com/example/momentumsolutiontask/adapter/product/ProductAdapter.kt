@@ -1,4 +1,4 @@
-package com.example.momentumsolutiontask.ui.product_screen.view.adapter
+package com.example.momentumsolutiontask.adapter.product
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.momentumsolutiontask.R
+import com.example.momentumsolutiontask.adapter.OnClickListener
 import com.example.momentumsolutiontask.databinding.ItemProductBinding
 import com.example.momentumsolutiontask.pojo.ProductResponse
 
@@ -35,24 +36,14 @@ class ProductAdapter(
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(products: ProductResponse) {
-            setData(products)
+            binding.item = products
             itemView.setOnClickListener {
                 listener.onClick(products)
 
             }
         }
 
-        private fun setData(products: ProductResponse){
-            Glide.with(binding.productImage)
-                .load(products.image)
-                .placeholder(R.drawable.ic_loading)
-                .error(R.drawable.ic_loading)
-                .into(binding.productImage)
 
-            binding.productTitleTxt.text = products.title
-            binding.productDescTxt.text = products.description
-            binding.productPriceTxt.text = products.price.toString()
-        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
