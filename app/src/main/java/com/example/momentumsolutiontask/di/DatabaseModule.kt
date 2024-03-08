@@ -2,6 +2,8 @@ package com.example.momentumsolutiontask.di
 
 import android.content.Context
 import androidx.room.Room
+import com.example.momentumsolutiontask.repository.source.local.ProductDao
+import com.example.momentumsolutiontask.repository.source.local.ProductDataBase
 import com.example.momentumsolutiontask.utils.PRODUCT_DATABASE
 import dagger.Module
 import dagger.Provides

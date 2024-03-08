@@ -1,6 +1,7 @@
 package com.example.momentumsolutiontask.di
 
 import com.example.momentumsolutiontask.network.DataService
+import com.example.momentumsolutiontask.repository.source.remote.DataRemoteSource
 import com.example.momentumsolutiontask.utils.BASE_URL
 import dagger.Module
 import dagger.Provides
